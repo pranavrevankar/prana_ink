@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Revankar</title>
+    <meta name="description" content="A Customer-Centric Professional, a dad and a husband. I've always loved building things, from chrome extensions to a food-delivery business. Especially lately, I've been vibe coding most nights. You can find a sneak-peak of my projects below.">
+    <meta name="author" content="Pranav Revankar">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pranav Revankar">
+    <meta property="og:description" content="Customer-Centric Professional, a dad and a husband.">
+    <meta property="og:url" content="https://pranavrevankar.com">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'tag-side-hustle': '#f97316',     // Orange for blog posts
+                        'tag-project': '#eab308',  // Yellow for projects  
+                        'tag-writing': '#06b6d4',  // Cyan for writing
+                        'tag-tool': '#8b5cf6',     // Purple for tools
+                        'tag-other': '#64748b',    // Gray for other categories
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom hover transitions */
+        .link-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .link-hover:hover {
+            transform: translateY(-1px);
+        }
+        
+        /* Filter transitions */
+        .filter-item {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .filter-item.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+        
+        /* Filter button styles */
+        .filter-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .filter-btn:hover {
+            transform: translateY(-1px);
+        }
+        .filter-btn.active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <div class="max-w-2xl mx-auto px-6 py-16 sm:py-24">
+        <!-- Header Section -->
+        <header class="mb-16">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
+                Hi, I'm Pranav &#128075;.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                A Customer-Centric Professional, a dad and a husband. I've always loved building things, from chrome extensions to a food-delivery business. Especially lately, I've been vibe coding most nights. You can find a sneak-peak of my projects and side-hustles below.
+            </p>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="mb-12">
+            <div class="flex flex-wrap gap-2">
+                <button class="filter-btn active bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-full" 
+                        onclick="filterItems('all')" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn bg-tag-project text-white text-sm font-medium px-4 py-2 rounded-full" 
+                        onclick="filterItems('project')" data-filter="project">
+                    Project
+                </button>
+                <button class="filter-btn bg-tag-side-hustle text-white text-sm font-medium px-4 py-2 rounded-full" 
+                        onclick="filterItems('side-hustle')" data-filter="side-hustle">
+                    Side Hustle
+                </button>
+                <button class="filter-btn bg-tag-other text-white text-sm font-medium px-4 py-2 rounded-full" 
+                        onclick="filterItems('other')" data-filter="other">
+                    Other
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content List -->
+        <main>
+            <!-- 
+                EDITING GUIDE:
+                To add new entries, copy the article structure below and:
+                1. Update the href and title
+                2. Change the description 
+                3. Update tags (see color guide below)
+                4. Add new tag colors in the tailwind config above if needed
+                
+                TAG COLOR GUIDE:
+                - Blog: tag-blog (orange)
+                - Project: tag-project (yellow)  
+                - Writing: tag-writing (cyan)
+                - Tool: tag-tool (purple)
+                - Other: tag-other (gray)
+            -->
+            
+            <div class="space-y-8" id="content-list">
+                <!-- Blog Post Example -->
+                <article class="group filter-item" data-tags="project,side-hustle">
+                    <a href="https://casperplays.com/" 
+                       class="block link-hover"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            CasperPlays: Toy-subscription service for toddler [Idea]
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            I was very intrigued to see my son grow so fast, especially b/w the age of 1 to 3. But that also meant he wanted more challenging toys, every couple of months. Worked on this idea with fellow dads to build a toy-subscription service for toddlers.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-project text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Project
+                            </span>
+                            <span class="inline-block bg-tag-side-hustle text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Side Hustle
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Project Example -->
+                <article class="group filter-item" data-tags="project">
+                    <a href="https://chromewebstore.google.com/detail/noted-keyword-detection-f/lcdgjdabcdahkoaeebckcjcblnmnbdnh" 
+                       class="block link-hover"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            Keyword detection in Job descriptions - Chrome extension
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                         AI-coded this chrome extension that helped me find my next job. It would flag based on job description (works for LinkedIn jobs) if it required German language skills or not. Now available in Chrome Web Store and used by ~50 users.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-project text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Project
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="group filter-item" data-tags="side-hustle">
+                    <a href="https://medium.com/pranavrevankar/yoyo-lunchbox-turns-2-e1685ef8da9f" 
+                       class="block link-hover"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            YOYO Lunchbox - A mildly successful (majorly failed) side hustle
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            Last mile delivery is difficult, and there was no better way to learn this than burning a lot of money on building a food-delivery business. But we did learn a lot, and I was able to scale up to 3000 orders a month, which was my peak.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-side-hustle text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Side Hustle
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="group filter-item" data-tags="tool,project">
+                    <a href="https://medium.com/pranavrevankar/how-to-build-a-slackbot-using-google-scripts-to-post-messages-to-slack-using-data-in-google-sheets-c32dc354a24f" 
+                       class="block link-hover"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            Slack App - Google Sheets to Slack
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            This Slack app built on Google app script connects the google sheets to Slack. 
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-project text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Project
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Multi-tag Example -->
+                <article class="group filter-item" data-tags="blog,writing">
+                    <a href="https://medium.com/pranavrevankar/daily-tracker-for-google-adwords-using-scripts-c3df97f02564" 
+                       class="block link-hover"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            Google Ads - Automated daily reporting
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            This script would be obsolete now as it was built in 2017, but back then our team loved it as it saved time spent on manual reporting of Google Ads.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-project text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Project
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Blog Post -->
+                <article class="group filter-item" data-tags="other">
+                    <a href="blog-2025-09-01.html" 
+                       class="block link-hover">
+                        <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                            What I'm upto on 01.09.2025
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            My not-so-personal diary!
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-tag-other text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                                Other
+                            </span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Contact -->
+                <article class="group filter-item" data-tags="other">
+                    <div class="block link-hover">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                            Get in Touch
+                        </h2>
+                        <p class="text-gray-600 mb-3 leading-relaxed">
+                            I'd love to connect! Feel free to reach out via email or connect on LinkedIn.
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <a href="https://linkedin.com/in/pranavrevankar" 
+                               class="text-gray-600 hover:text-blue-600 underline underline-offset-2"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/pranavrevankar" 
+                               class="text-gray-600 hover:text-blue-600 underline underline-offset-2"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                            <a href="https://medium.com/@pranavrevankar007" 
+                               class="text-gray-600 hover:text-blue-600 underline underline-offset-2"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Medium
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+                © 2024 Pranav Revankar
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function filterItems(category) {
+            // Get all filter buttons and articles
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('.filter-item');
+            
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter articles
+            articles.forEach(article => {
+                const tags = article.getAttribute('data-tags').split(',');
+                
+                if (category === 'all') {
+                    // Show all articles
+                    article.classList.remove('hidden');
+                } else {
+                    // Show only articles that contain the selected tag
+                    if (tags.includes(category)) {
+                        article.classList.remove('hidden');
+                    } else {
+                        article.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        // Initialize with all items visible
+        document.addEventListener('DOMContentLoaded', function() {
+            filterItems('all');
+        });
+    </script>
+</body>
+</html>

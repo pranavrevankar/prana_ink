@@ -1,0 +1,27 @@
+# Assets Directory
+
+This directory contains static assets for the personal website:
+
+- **Images**: Profile photos, project screenshots, etc.
+- **Documents**: Resume, portfolio files, etc.
+- **Icons**: Custom icons and graphics
+
+## File Guidelines
+
+- Use descriptive filenames
+- Optimize images for web (compress file sizes)
+- Keep file organization clean and logical
+
+## Suggested Structure
+
+```
+assets/
+├── images/
+│   ├── profile.jpg
+│   ├── project-screenshots/
+│   └── icons/
+├── documents/
+│   ├── Pranav_Revankar_Resume.pdf
+│   └── portfolio/
+└── other/
+```
