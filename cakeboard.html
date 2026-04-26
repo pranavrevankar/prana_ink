@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakeboard - Pranav Revankar</title>
+    <meta name="description" content="Cakeboard - a college project (2013-2014) that kept all the components needed for breadboarding right with the breadboard itself.">
+    <meta name="author" content="Pranav Revankar">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cakeboard">
+    <meta property="og:description" content="A college project (2013-2014) that kept components organized right with the breadboard.">
+    <meta property="og:url" content="https://pranavrevankar.com/cakeboard.html">
+    <meta property="og:image" content="assets/cover.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'tag-side-hustle': '#f97316',
+                        'tag-project': '#eab308',
+                        'tag-writing': '#06b6d4',
+                        'tag-tool': '#8b5cf6',
+                        'tag-other': '#64748b',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .link-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .link-hover:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <div class="max-w-3xl mx-auto px-6 py-16 sm:py-24">
+        <!-- Navigation -->
+        <nav class="mb-12">
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium link-hover">
+                ← Back to Home
+            </a>
+        </nav>
+
+        <!-- Header -->
+        <header class="mb-12">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-3 text-gray-900">
+                Cakeboard
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 mb-6">
+                A college project · <span class="font-semibold text-gray-900">2013 – 2014</span>
+            </p>
+            <div class="flex gap-2 mb-8">
+                <span class="inline-block bg-tag-project text-white text-xs font-medium px-2.5 py-0.5 rounded-full">
+                    Project
+                </span>
+            </div>
+        </header>
+
+        <!-- Cover Image -->
+        <figure class="mb-12">
+            <img src="assets/cover.jpg" alt="Cakeboard prototype" class="w-full rounded-lg shadow-sm">
+        </figure>
+
+        <!-- Intro -->
+        <article class="prose prose-lg max-w-none mb-16">
+            <div class="text-gray-800 leading-relaxed space-y-6">
+                <p class="text-xl text-gray-700 mb-4 font-light">
+                    Anyone who has spent a night breadboarding knows the drill — you sit down to build a circuit and immediately spend twenty minutes hunting for the right resistor, an LED that still works, and the jumper wire you swore was on the table a second ago.
+                </p>
+                <p>
+                    Cakeboard was my attempt to fix that. It is a layered "cake" of trays that sits underneath a breadboard and keeps every component you need — resistors, LEDs, capacitors, jumper wires — right there where you are working. Hence the name: a board, but stacked like a cake.
+                </p>
+                <p>
+                    I built this during my engineering college years between 2013 and 2014. It started as a workbench frustration and ended up as a small electronics project that I kept iterating on. Below are the three features I cared about most.
+                </p>
+            </div>
+        </article>
+
+        <!-- Features -->
+        <section class="space-y-12 mb-16">
+            <!-- Feature 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <figure>
+                    <img src="assets/feature-1.jpg" alt="Cakeboard component storage trays" class="w-full rounded-lg shadow-sm">
+                </figure>
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+                        Feature 1 — Components, always at hand
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Store all the components you need for breadboarding right there, no more forgetting.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <figure>
+                    <img src="assets/feature-2.jpg" alt="Built-in fuse switch on the Cakeboard" class="w-full rounded-lg shadow-sm">
+                </figure>
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+                        Feature 2 — Built-in fuse switch
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Switch directly with a built-in fuse to prevent breadboard burn.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <figure>
+                    <img src="assets/feature-3.jpg" alt="Wire cutter clipped under the Cakeboard" class="w-full rounded-lg shadow-sm">
+                </figure>
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+                        Feature 3 — Wire cutter clip
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Also clip the wire cutter right below the Cakeboard.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-gray-200">
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500">© 2024 Pranav Revankar</p>
+                <a href="index.html" class="text-sm text-blue-600 hover:text-blue-800">← Back to Home</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
